@@ -1,17 +1,14 @@
-import React from "react";
-// import Radium from "radium";
+import React from 'react';
 
+import classes from './Person.css';
 
-import './Person.css';
-
-const person = (props) => {
-
-
+const person = ( props ) => {
     return (
-        <div className="Person">
-            <p onClick={props.click}>I am {props.name} and i am {props.age}yo. {props.children}</p>
+        <div className={classes.Person}>
+            <p onClick={props.click}>I'm {props.name} and I am {props.age} years old!</p>
+            <p>{props.children}</p>
             <input type="text" onChange={props.changed} value={props.name} />
-        </div>  
+        </div>
     )
 };
 
